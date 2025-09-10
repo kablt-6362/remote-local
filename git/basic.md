@@ -51,3 +51,12 @@
 [.gitignore.io](https://www.toptal.com/developers/gitignore/)
 - 해당 사이트는 개발자가 작업하는 환경에 따라 어떤것을 .gitignore에 추가하면 좋은지 추천해주는 사이트이다.
 예를 들어, 윈도우,unity,macOs, vscode 등 검색어를 등록하면 등록된 검색어 기준으로 .gitignore에 등록하면 좋은것들을 추천해서 보여준다
+
+# Github
+
+## 원격 저장소 생성, 연걸 ,동기화
+1. 원격 저장소 생성
+2. 지역 저장소 - 원격 저장소 연결
+3. 지역 저장소 -> 원격 저장소 Push
+4. 원격 저장소 파일 생성
+5. 지역 저장소 <- 원격 저장소 Pull
