@@ -54,3 +54,4 @@ Git에 대해 알아보기 전에, 먼저 **버전 관리 시스템(Version Cont
 - macOs는 'ctrl + Command + space' 누르면 사용할 수 있다.
 
 ### GUI로 커밋하기1
+## 두번째 연습
