@@ -26,6 +26,8 @@
 - `git commig -m"커밋메세지"`
  ## 현재 파일 상태를 출력하는 명령어
  - `git status`
+ ## 스테이지에 있는 변경사항 확인
+ - `git diff --staged`
 
 # 커밋 원리 테스트
 ## 폴더안의 파일 먼저 add 후 commit
