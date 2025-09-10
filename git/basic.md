@@ -60,3 +60,21 @@
 3. 지역 저장소 -> 원격 저장소 Push `git push origin main`
 4. 원격 저장소 파일 생성
 5. 지역 저장소 <- 원격 저장소 Pull `git pull origin main`
+
+### 원격저장소(갓허브) 간단설명
+1. 깃허브 홈페이지에서 Repositories 에 들어가 New를 눌러 사용할 저장소 생성
+2. vscode 터미널에 `git remote add origin (원격저장소 주소)` 를 입력해 로컬저장소와 외부 저장소 연결
+3. `git push origin main` 을 통해 로컬저장소의 커밋내용을 와부저장소(깃허브)에 전달
+4. `git pull origin main` 을 통해 외부저장소(깃허브)의 커밋된 내용을 로컬저장소에 전달
+
+### git 원격저장소 연결 확인하기 및 연결 헤제하기
+1. `git remote -v` 연결 확인하기
+2. `git remote remove origin` 입력시 원격저장소와의 연결통로 삭제
+
+### 궁금한점
+1. 로컬저장소 내용이 사고로 삭제되었을때 원격저장소를 이용해 복원이 가능한가.
+2. 실수로 원격저장소의 repositories를 삭제하고 `git pull origin main`을 입력하면 어떻게 되는가?
+3. 로컬저장소와 외부저장소에 내용 B가 있는 상태에서 로컬에 내용 A를 추가하고 외부저장소에 내용 C를 추가한뒤 push와 pull을 하면 두곳 다 내용이 A,B,C가 되는가?
+4. 로컬저장소와 외부저장소가 같은 파일을 서로 다른 내용으로 수정했을때 push 또는 pull했을때 어떤일이 일어나는가?
+
+
