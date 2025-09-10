@@ -40,6 +40,9 @@ Git에 대해 알아보기 전에, 먼저 **버전 관리 시스템(Version Cont
 - **Git의 기본 명령어:** `add`, `commit`, `push`, `pull` 등 기본적인 명령어의 의미와 사용법을 알아보세요.
 - **GitHub란?:** Git으로 관리하는 프로젝트를 온라인으로 공유하고 다른 사람과 함께 작업할 수 있는 웹 서비스입니다. Git과 GitHub의 차이점을 알아보세요.
 
+
+---
+
 # 폴더의 위치에 따른 git init을 잘못하면 무엇인가
 
 ## git add 와 git commit
