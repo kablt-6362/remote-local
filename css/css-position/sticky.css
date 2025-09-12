@@ -1,0 +1,16 @@
+.header {
+  height: 200px;
+  background-color: lightgreen;
+}
+
+.sticky {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  position: sticky;
+  top: 80px;
+}
+.content {
+  height: 2000px;
+  background-color: lightblue;
+}
