@@ -1,0 +1,66 @@
+.parent {
+  background-color: blue;
+  height: 600px;
+}
+
+.child-1 {
+  background-color: red;
+  width: 50%;
+  height: 50%;
+}
+
+.child-2 {
+  background-color: yellow;
+  width: 25%;
+  height: 50%;
+}
+
+.parent-font {
+  font-size: 30px;
+}
+
+.child-font-1 {
+  /* 30px * 0.5 = 15px */
+  font-size: 0.5em;
+}
+
+.child-font-2 {
+  /* 30px * 2 = 60px */
+  font-size: 2em;
+}
+
+/* child-child-font-2의 부모는 child-font-2이고, child-font-2의 부모는 parent-font이다 */
+.child-child-font-2 {
+  /* 60px * 2 = 120px */
+  font-size: 2em;
+}
+
+/* rem - 웹페이지 기본 폰트크기값(보통16px) */
+
+.rem-font-1 {
+  /* 16px * 0.5= 8px */
+  font-size: 0.5rem;
+}
+.rem-font-2 {
+  /* 16px * 2= 32px */
+  font-size: 2rem;
+}
+
+/* viewport */
+.full-height {
+  /* 화면 높이 만큼의 100% 높이 */
+  height: 100vh;
+  background-color: burlywood;
+}
+
+.parent-div {
+  color: aqua;
+  font-size: 1.5rem;
+  /* 테두리 : 2px 검은색 실선 */
+  border: 2px black solid;
+}
+
+.child-div {
+  /* 테두리 : 2px 빨강색 점선 */
+  border: 2px red dashed;
+}

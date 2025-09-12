@@ -1,0 +1,66 @@
+/* 컨테츠(내용을적는곳)과 보더(테두리)사이의 간격을 조정 */
+.padding-box {
+  padding-left: 0.5rem;
+  padding-right: 0.9rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.border-box {
+  border-radius: 1rem;
+  border-color: red;
+  border-width: 2px;
+  border-style: dashed;
+  /* 너비, 종류 , 색  */
+}
+span {
+  margin: 20px;
+}
+
+.margin-1 {
+  height: 100px;
+  background-color: red;
+  /* 마진중첩에 의해 무시됨/ bottom 100 + 아래클래스 top 200 x / 더 큰거 기준으로 거리잼 */
+  margin-bottom: 100px;
+}
+.margin-2 {
+  height: 100px;
+  background-color: blue;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.margin-3 {
+  height: 100px;
+  background-color: yellow;
+  /* 마진 중첩에의해 무시됨 */
+  margin-top: 100px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 2rem;
+  padding: 20px;
+}
+
+.content-box {
+  /* 너비와 높이의 계산을
+  오로지 콘테츠로만 계산한다 */
+  box-sizing: content-box;
+}
+
+.border-box {
+  /* 너비와 높이의 게산을
+  콘테츠 + 페딩 + 테두리로 계산한다 */
+  box-sizing: border-box;
+}
+
+/* box-sizing 기본값을 변경 */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
