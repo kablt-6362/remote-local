@@ -1,0 +1,20 @@
+/* 미디어 쿼리(meida query) */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+/* 너비가 767이하일때 */
+@media (max-width: 767px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
