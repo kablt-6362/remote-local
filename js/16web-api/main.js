@@ -1,14 +1,15 @@
-//axios 불러오기
 import axios from "axios";
 
-//async//await
-async function connectTest() {
-  //axios.get(url): 데이터 요청에 대한 응답
-  const response = await axios.get(
-    "https://jsonplaceholder.typicode.com/posts"
-  );
-  console.log(response["data"]);
+//도메인주소
+const BASE_URL = `https://dummyjson.com`;
 
-  // console.table(Object.keys(response));
+async function getALLProducts() {
+  //해당 사이트에서 정보를 받아와서 res에 할당함
+  const res = await axios.get(`${BASE_URL}/products`);
+  //정보중 key값이 "data"인 것들만 data에 할당함
+  const data = res["data"];
+
+  console.log(data);
 }
-connectTest();
+
+getALLProducts();
