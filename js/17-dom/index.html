@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="parent"></div>
+    <script>
+      //API 사용을 위한 기본 주소(URL)
+      const DOMAIN_NAME = "https://dummyjson.com";
+
+      //id 가 parent인 요소를 선택, 할당
+      const parentTag = document.querySelector("#parent");
+      // 상품 목록을 요청할 비동기(async)함수
+      async function getProduct() {
+        const config = { url: `${DOMAIN_NAME}/products`, method: "get" };
+        const response = await axios(config);
+        const data = response["data"];
+
+        //data객체에서 products 속성 추출
+        const products = data["products"];
+        // 배열 고차 메서드를 사용해서 배열 데이터인 products를 반복
+        products.forEach((element) => {
+          //매개변수 element:배열에 저장된 개별 상품 객체
+          //상품(element) 정보에서 이름 (title)속설 추출
+          const title = element["title"];
+          const pTag = document.createElement("p");
+          //p태그 요소의 텍스트를 상품의 이름으로 설정
+          pTag.textContent = title;
+          // id가 parent인 요소에 p태그 추가, append매서드 써서
+          parentTag.append(pTag);
+        });
+
+        console.table(products);
+      }
+      getProduct();
+      // 통신 연결 테스트 함수
+      async function testConnect() {
+        //요청 주소->url
+        //요청 방법->method
+        const config = { url: `${DOMAIN_NAME}/test`, method: "get" };
+
+        //axios를 활용해서 요청(클라이언트->서버)
+        //요청에 대한 응답을 변수 response에 저장
+        const respon = await axios(config);
+        console.log(respon["data"]);
+      }
+      // testConnect(); 호출 성공
+    </script>
+  </body>
+</html>

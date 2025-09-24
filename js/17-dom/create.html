@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div id="parent">
+      <div id="child"></div>
+    </div>
+  </head>
+  <body>
+    <script>
+      //div,p 태그 생성, 변수에 할당
+      const divCreat = document.createElement("div");
+      const pCreat = document.createElement("p");
 
-  <script>
-    
+      // div 태그에 id속성 "container" 지정
+      divCreat.setAttribute("id", "container");
+      // p 태그 요소의 속성 textcontent 속성을 텍스트로 설정
+      pCreat.textContent = "pTag";
 
+      // append() 메서드로 body 태그에 divtag를 추가
+      const bodytag = document.querySelector("body");
+      bodytag.append(divCreat, pCreat);
 
-  </script>
-</body>
+      // h1 태그 요소를 생성하고,변수에 할당
+      const h1Tag = document.createElement("h1");
+      h1Tag.textContent = "H1";
+      //id 가 child인 요소를 선택하고, 변수에 할당
+      const idChild = document.querySelector("#child");
+      //id 가 parent인 요소 선택, 변수 할당
+      const idParent = document.querySelector("#parent");
+
+      //부모 요소인 parent tag, 특정 자식 요소 child tag, 추가할 요소 h1 tag
+      idParent.insertBefore(h1Tag, idChild);
+    </script>
+  </body>
 </html>
