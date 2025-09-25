@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 19-event-orioagation/capture.html -->
+
+    <div id="parent">
+      <div id="child">
+        <button id="button">버튼</button>
+      </div>
+    </div>
+
+    <script>
+      const parent = document.querySelector("#parent");
+      const child = document.querySelector("#child");
+      const button = document.querySelector("#button");
+      // 3개의 요소에 addEventListner()로 핸들러 등록
+      //캡처링 단게에서 이벤트 처리(세번쨰 매개변수: {capture : true})
+      parent.addEventListener(
+        "click",
+        () => {
+          console.log("최상위 div 캡쳐링");
+        },
+        { capture: true }
+      );
+      child.addEventListener(
+        "click",
+        () => {
+          console.log("상위 div 캡쳐링");
+        },
+        { capture: true }
+      );
+      button.addEventListener("click", () => {
+        console.log("버튼 클릭");
+      });
+    </script>
+  </body>
+</html>

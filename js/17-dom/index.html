@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <button>클릭</button>
     <div id="parent"></div>
     <script>
       //API 사용을 위한 기본 주소(URL)
@@ -36,7 +37,15 @@
 
         console.table(products);
       }
-      getProduct();
+      // getProduct();
+
+      // 태그명이 button인 요소의 click 이벤트가 발생했을 때
+      const butTag = document.querySelector("button");
+      butTag.addEventListener("click", (event) => {
+        getProduct();
+      });
+      // 함수 getProducts가 호출 코드작성
+
       // 통신 연결 테스트 함수
       async function testConnect() {
         //요청 주소->url
