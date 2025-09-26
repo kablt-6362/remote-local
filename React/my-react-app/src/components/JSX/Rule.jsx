@@ -22,7 +22,7 @@ export default function Rule() {
       {/* 규칙2. 항상 모든 태그는 닫아주어야 한다 */}
       {/* <input> */}
       {/* input 태그의 self-closing */}
-      <input />
+      {/* <input /> */}
 
       {/* 규칙3. 속성명(class,onclick,onsubmit)을 카멜 케이스로 작성해야한다 */}
       {/* 카멜케이스: 첫단어는 소문자, 이후 단어의 시작 글자를 대문자 */}
