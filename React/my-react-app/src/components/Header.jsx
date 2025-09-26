@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Interpolation from "./JSX/Interpolation";
 
 export default function Header() {
   return (
-    <div>Header</div>
-  )
+    <div>
+      <Interpolation></Interpolation>
+    </div>
+  );
 }
