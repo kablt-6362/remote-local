@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 export default function AuthHome() {
   return (
     <div>
-      인증홈페이지
-      <div className="flex flex-col gap-4">
+      인증 홈페이지
+      <div className="flex flex-col">
         {/* 로그인 페이지 이동 LInk */}
-        <Link to="auth/login">로그인 페이지</Link>
+        <Link to="/auth/login">로그인 페이지</Link>
         {/*  회원가입 페이지 이동 Link */}
-        <Link to="auth/signup">회원가입 페이지</Link>
+        <Link to="/auth/signup">회원가입 페이지</Link>
       </div>
     </div>
   );

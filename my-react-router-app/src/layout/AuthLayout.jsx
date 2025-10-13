@@ -24,7 +24,7 @@ export default function AuthLayout() {
           className={({ isActive }) =>
             `${baseClass} ${isActive ? activaClass : ""}`
           }
-          to="auth/login"
+          to="/auth/login"
         >
           인증 로그인
         </NavLink>
@@ -32,11 +32,18 @@ export default function AuthLayout() {
           className={({ isActive }) =>
             `${baseClass} ${isActive ? activaClass : ""}`
           }
-          to="auth/signup"
+          to="/auth/signup"
         >
           인증 회원가입
         </NavLink>
-        <NavLink to="/">홈페이지</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activaClass : ""}`
+          }
+          to="/"
+        >
+          홈페이지
+        </NavLink>
       </div>
       <Outlet />
     </div>

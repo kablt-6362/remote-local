@@ -41,8 +41,8 @@ const router = createBrowserRouter([
         //보호할 경로와 컴포넌트 정의
         children: [
           {
-            path: "/auth",
-            Component: AuthHome,
+            path: "profile",
+            Component: Profile,
           },
         ],
       },
