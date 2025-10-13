@@ -10,20 +10,20 @@ export default function Profile() {
   if (isLogin === false) {
     // Navigate 는 컴포넌트라서 return 내부에 있어야 한다.
     // replace 속성: history(사용자가 페이지를 이동한 내역)에 쌓이지 않는다
-    return <Navigate to="/" replace />;
+    return <Navigate to="/auth/login" replace />;
   }
 
-  const naviate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div>
       사용자정보
       <button
-        className="border p-2"
+        className="border p-2 cursor-pointer"
         onClick={() => {
           alert("홈페이지로 이동합니다");
           // 페이지 이동 전특정 로직을 수행할 떄 사용
-          naviate("/");
+          navigate("/");
         }}
       >
         홈페이지로 이동
