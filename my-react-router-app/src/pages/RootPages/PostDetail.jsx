@@ -10,10 +10,23 @@ import { useParams } from "react-router-dom";
 export default function PostDetail() {
   // 경로 파라미터 값 불러오기
   const { postId } = useParams();
+  const [post, setPost] = useState({});
 
   useEffect(() => {
-    console.log(postId);
+    async function getPost() {
+      const response = await axios(`https://dummyjson.com/posts/${postId}`);
+      setPost(response.data);
+      console.log(response.data);
+    }
+    getPost();
   }, [postId]);
 
-  return <div>postDetail</div>;
+  return (
+    <div>
+      <p>제목-{post.title}</p>
+      <p>내용</p>
+      <div>{post.body}</div>
+    </div>
+  );
 }
+//내꺼
