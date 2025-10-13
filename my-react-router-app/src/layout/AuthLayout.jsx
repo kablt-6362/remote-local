@@ -20,10 +20,20 @@ export default function AuthLayout() {
         >
           인증 홈페이지
         </NavLink>
-        <NavLink className={`${baseClass}`} to="auth/login">
+        <NavLink
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activaClass : ""}`
+          }
+          to="auth/login"
+        >
           인증 로그인
         </NavLink>
-        <NavLink className={`${baseClass}`} to="auth/signup">
+        <NavLink
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activaClass : ""}`
+          }
+          to="auth/signup"
+        >
           인증 회원가입
         </NavLink>
         <NavLink to="/">홈페이지</NavLink>

@@ -4,6 +4,7 @@
 // 라우터 : 주소(url)와 컴포넌트 매칭
 
 import { createBrowserRouter } from "react-router-dom";
+import Protectedlayout from "../layout/Protectedlayout";
 
 // 레이아웃 컴포넌트 불러오기
 import Rootlayout from "../layout/Rootlayout";
@@ -35,8 +36,15 @@ const router = createBrowserRouter([
         Component: About,
       },
       {
-        path: "profile",
-        Component: Profile,
+        //path 속성 x
+        Component: Protectedlayout,
+        //보호할 경로와 컴포넌트 정의
+        children: [
+          {
+            path: "/auth",
+            Component: AuthHome,
+          },
+        ],
       },
     ],
   },
