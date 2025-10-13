@@ -18,6 +18,9 @@ import Profile from "../pages/RootPages/Profile";
 import AuthHome from "../pages/Authpages/AuthHome";
 import Login from "../pages/Authpages/Login";
 import SignUp from "../pages/Authpages/SignUp";
+// parama
+import PostDetail from "../pages/RootPages/PostDetail";
+import PostListNew from "../pages/RootPages/PostListNew";
 
 // 라우터 설정 생성
 const router = createBrowserRouter([
@@ -34,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: "about",
         Component: About,
+      },
+      {
+        path: "posts",
+        Component: PostListNew,
+      },
+      {
+        path: "posts/:postid",
+        Component: PostDetail,
       },
       {
         //path 속성 x

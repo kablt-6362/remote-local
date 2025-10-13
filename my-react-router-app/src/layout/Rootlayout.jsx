@@ -11,6 +11,7 @@ export default function Rootlayout() {
         <Link to="/about">소개페이지</Link>
         <Link to="/profile">사용자 정보 페이지</Link>
         <Link to="/auth">인증 페이지로 이동</Link>
+        <Link to="/posts">post 목록 페이지</Link>
       </div>
       {/*Outlet 캄포넌트 : 중첩된 자식 컴포넌트가 위치할 구멍  */}
       <Outlet />
