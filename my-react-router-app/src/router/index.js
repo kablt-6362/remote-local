@@ -24,15 +24,17 @@ import PostListNew from "../pages/RootPages/PostListNew";
 import PATHS from "../constant/paths";
 import rootRouter from "./routes/rootRoutes";
 import authRouter from "./routes/authroutes";
+import NotFound from "../pages/RootPages/NotFound";
 
 // 라우터 설정 생성
 const router = createBrowserRouter([
+  //스프레드 연산자로 경로 배열을 복사한다
+  ...rootRouter,
+  ...authRouter,
   {
-    //스프레드 연산자로 경로 배열을 복사한다
-    ...rootRouter,
-    ...authRouter,
+    path: "*", // 별표 : 모든거에 매핑(일치)되는 특수 문자
+    Component: NotFound,
   },
-  // auth 레이아웃
 ]);
 
 export default router;

@@ -9,7 +9,7 @@ export default function Rootlayout() {
     <div>
       <div className="flex gap-4 p-2 border-2 border-gray-300">
         <Link to={PATHS.ROOt.INDEX}>홈페이지</Link>
-        <Link to={PATHS.ROOt.ABOUT.ABOUT}>소개페이지</Link>
+        <Link to={PATHS.ROOt.ABOUT}>소개페이지</Link>
         <Link to={PATHS.ROOt.PROFILE}>사용자 정보 페이지</Link>
         <Link to={PATHS.Auth.INDEX}>인증 페이지로 이동</Link>
         <Link to={PATHS.ROOt.POSTS}>post 목록 페이지</Link>

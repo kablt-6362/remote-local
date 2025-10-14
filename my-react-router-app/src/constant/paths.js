@@ -10,8 +10,8 @@ const PATHS = {
   },
   Auth: {
     INDEX: "/auth",
-    SIGNUP: "/signup",
-    LOGIN: "/login",
+    SIGNUP: "/auth/signup",
+    LOGIN: "/auth/login",
   },
 };
 export default PATHS;
