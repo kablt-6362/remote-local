@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import PostDetail from "./PostDetail";
 import { Link } from "react-router-dom";
+import PATHS from "../../constant/paths";
 // usesearchparams 훅 불러오기
 // 쿼리 파라미터 관리
 import { useSearchParams } from "react-router-dom";
@@ -35,7 +36,6 @@ export default function PostListNew() {
     getPost();
   }, [searchParams]);
 
-
   // 의존성 배열에 searchParams을 넣어
   // 쿼리파라미터가 변경되면 useEffect 콜백 함수를 실행한다
   // 쿼리 파라미터가 변경된다 ->setSearchParams()실행
@@ -60,11 +60,10 @@ export default function PostListNew() {
         >
           Id 내림차순
         </button>
-
       </div>
       {posts.map((post) => {
         return (
-          <Link key={post.id} to={`/posts/${post.id}`}>
+          <Link key={post.id} to={PATHS.ROOt.getPostEdtail(post.id)}>
             No.{post.id} - {post.title}
             <br />
           </Link>
