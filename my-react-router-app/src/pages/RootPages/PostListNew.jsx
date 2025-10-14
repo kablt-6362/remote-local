@@ -13,9 +13,13 @@ export default function PostListNew() {
       setPosts(data);
     }
     getPost();
-  },[]);
+  }, []);
   return (
     <div>
+      <div className="flex gap-2">
+        <button className="p-2 border-2 cursor-pointer ">Id 오름차순</button>
+        <button className="p-2 border-2 cursor-pointer">Id 내림차순</button>
+      </div>
       {posts.map((post) => {
         return (
           <Link key={post.id} to={`/posts/${post.id}`}>
