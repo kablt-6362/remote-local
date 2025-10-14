@@ -33,15 +33,9 @@ export default function PostListNew() {
       setPosts(data);
     }
     getPost();
-<<<<<<< HEAD
-  }, []);
-  return (
-    <div>
-      <div className="flex gap-2">
-        <button className="p-2 border-2 cursor-pointer ">Id 오름차순</button>
-        <button className="p-2 border-2 cursor-pointer">Id 내림차순</button>
-=======
   }, [searchParams]);
+
+
   // 의존성 배열에 searchParams을 넣어
   // 쿼리파라미터가 변경되면 useEffect 콜백 함수를 실행한다
   // 쿼리 파라미터가 변경된다 ->setSearchParams()실행
@@ -66,7 +60,7 @@ export default function PostListNew() {
         >
           Id 내림차순
         </button>
->>>>>>> aa79189e334ae7063ca98f550c5e5bceb3e3b6c3
+
       </div>
       {posts.map((post) => {
         return (
