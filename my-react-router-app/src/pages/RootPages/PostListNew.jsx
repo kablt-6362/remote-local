@@ -64,6 +64,12 @@ export default function PostListNew() {
       {posts.map((post) => {
         return (
           <Link key={post.id} to={PATHS.ROOt.getPostEdtail(post.id)}>
+            {/* to의 {]안의 값 PATHS.ROOt.getPostEdtail(post.id)}
+               는 /posts/:postId 즉, POST_DETAL를 나타낸다.
+               그래서 해당 PATHS.ROOt.getPostEdtail(post.id)는
+               PostDetail 컴포넌트로 라우팅 되고, 주소 파라미터값 postId는 해당
+               컴포넌트의 useParams의 객체에 저장된다
+               */}
             No.{post.id} - {post.title}
             <br />
           </Link>
