@@ -33,7 +33,7 @@ export default function Signup() {
     if (isSignup === true) {
       alert("회원가입을 성공했습니다. 메일함을 확인해주세요");
       dispatch(resetIsSingup);
-      navigate("/Home");
+      // navigate("/Home");
     }
   }, [isSignup, dispatch]);
 

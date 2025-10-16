@@ -27,12 +27,12 @@ export default function Login() {
   }
   useEffect(() => {
     if (token) {
-      alert("로그인상태입니다");
+      alert("로그인 되었습니다");
       console.log(token);
 
-      navigate("/");
+      // navigate("/profile");
     }
-  });
+  }, [token]);
 
   return (
     <div>
