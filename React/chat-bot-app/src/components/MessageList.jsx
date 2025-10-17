@@ -3,6 +3,7 @@ import ChatMessage from "./ChatMessage";
 
 // Props messages : 사용자 / AI 메세지 저장 배열
 export default function MessageList({ messages }) {
+  // useRef : document.querySelector()=> 요소를 선택
   const messagesEndRef = useRef(null);
 
   useEffect(() => {

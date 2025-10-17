@@ -28,9 +28,8 @@ export default function CreateContent() {
     // roke 역할: user라면 오른쪽에 배치, ai라면 왼쪽에 배치
     setMessages((prev) => [...prev, { role: "user", content: prompt }]);
 
-    setIsLoading(true);
     setPrompt("");
-
+    setIsLoading(true);
     await generateAIContent();
     setIsLoading(false);
   }

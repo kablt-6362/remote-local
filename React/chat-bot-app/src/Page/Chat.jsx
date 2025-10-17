@@ -28,7 +28,7 @@ export default function Chat() {
     }
     // 대화 내역 상태를 업데이트
     // 사용자의 프롬포트를 대화 내역에 추가(role:"user")
-    // roke 역할: user라면 오른쪽에 배치, ai라면 왼쪽에 배치
+    // role 역할: user라면 오른쪽에 배치, ai라면 왼쪽에 배치
     setMessages((prev) => [...prev, { role: "user", content: prompt }]);
 
     // currentPrompt 변수
