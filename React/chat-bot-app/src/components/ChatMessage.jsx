@@ -16,6 +16,7 @@ export default function ChatMessage({ message }) {
         <div className="markdown-content max-w-[90%]">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {message.content}
+            
           </ReactMarkdown>
         </div>
       ) : (

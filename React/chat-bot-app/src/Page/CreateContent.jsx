@@ -44,7 +44,6 @@ export default function CreateContent() {
         contents: prompt,
       });
       console.log(response);
-      //사용자 입력 프롬프트 초기화
 
       //messages 상태에 AI의 응답을 저장
       setMessages((prev) => [...prev, { role: "ai", content: response.text }]);
